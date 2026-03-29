@@ -43,6 +43,11 @@ pre {
     font-size: 21px;
     font-weight: 700;
     letter-spacing: .5px;
+    text-align: center;
+    font-style: italic;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
 }
 
 .orange {
@@ -76,6 +81,15 @@ pre {
 .contact p.contact-desc {
     margin-bottom: 25px;
     line-height: 27px;
+}
+
+/* About text block style: justified left and right edges */
+.main-body .about-text p {
+    text-align: justify;
+    text-justify: inter-word;
+    text-align-last: left;
+    line-height: 1.7;
+    margin-bottom: 1.35em;
 }
 
 .social-contact-icon {
@@ -218,6 +232,20 @@ pre {
 .icon.style2.fa-vk {
 
 	background-color: #ff8400;
+}
+/* Ensure square logo image keeps aspect ratio and is not vertically squashed */
+.logo .symbol img {
+	width: 64px;
+	height: auto;
+	max-height: 80px;
+	display: inline-block;
+	vertical-align: middle;
+	object-fit: contain;
+}
+
+.logo .title {
+	margin-left: 10px;
+	vertical-align: middle;
 }
 .icon.style2.fa-tumblr {
 
@@ -910,13 +938,23 @@ textarea#message {
 }
 @media screen and (max-width: 600px) {
 	.mfp-arrow {
-	top: 56%;
+		top: 56%;
+	}
 }
 @media screen and (min-width: 601px) {
 	.mfp-arrow {
-	top: 40%;
+		top: 40%;
+	}
 }
 .mfp-content .white-popup .col-md-4 {
 	padding-right: 25px;
 	padding-left: 25px;
+}
+
+.tiles {
+	display: none !important;
+}
+
+.instagram-feed {
+	padding: 3rem 0;
 }
